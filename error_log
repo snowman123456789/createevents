@@ -1,0 +1,35 @@
+[24-Apr-2015 10:36:43 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/polyline.php on line 61
+[24-Apr-2015 10:36:46 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/polyline.php on line 61
+[24-Apr-2015 10:40:52 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/polyline.php on line 61
+[25-Apr-2015 02:57:58 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/polyline.php on line 61
+[25-Apr-2015 04:32:48 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/polyline.php on line 61
+[08-Jul-2015 02:51:41 America/Chicago] PHP Fatal error:  Call to undefined method Drivermodel::editDriver() in /home2/technols/public_html/bakery/backery/application/controllers/driver.php on line 168
+[08-Jul-2015 02:54:48 America/Chicago] PHP Fatal error:  Call to undefined method Drivermodel::editDriver() in /home2/technols/public_html/bakery/backery/application/controllers/driver.php on line 168
+[08-Jul-2015 02:56:23 America/Chicago] PHP Fatal error:  Call to undefined method Drivermodel::editDriver() in /home2/technols/public_html/bakery/backery/application/controllers/driver.php on line 168
+[10-Jul-2015 02:58:58 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/addCustomer.php on line 232
+[10-Jul-2015 03:03:38 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/addCustomer.php on line 232
+[10-Jul-2015 08:28:20 America/Chicago] PHP Fatal error:  Call to undefined method Productmodel::getProducts() in /home2/technols/public_html/bakery/backery/application/controllers/welcome.php on line 401
+[10-Jul-2015 08:28:21 America/Chicago] PHP Fatal error:  Call to undefined method Productmodel::getProducts() in /home2/technols/public_html/bakery/backery/application/controllers/welcome.php on line 401
+[13-Jul-2015 02:02:56 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/technols/public_html/bakery/backery/application/views/viewDrivers.php on line 271
+[14-Jul-2015 01:29:37 America/Chicago] PHP Parse error:  syntax error, unexpected 'as' (T_AS) in /home2/technols/public_html/bakery/backery/application/views/addCustomer.php on line 274
+[14-Jul-2015 03:02:58 America/Chicago] PHP Fatal error:  Unsupported operand types in /home2/technols/public_html/bakery/backery/application/models/categorymodel.php on line 137
+[14-Jul-2015 04:25:20 America/Chicago] PHP Parse error:  syntax error, unexpected 'Select' (T_STRING) in /home2/technols/public_html/bakery/backery/application/controllers/pricegroup.php on line 97
+[14-Jul-2015 07:06:01 America/Chicago] PHP Fatal error:  Call to undefined method Customermodel::viewSelCustomer() in /home2/technols/public_html/bakery/backery/application/controllers/welcome.php on line 602
+[15-Jul-2015 02:19:11 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/technols/public_html/bakery/backery/application/controllers/welcome.php on line 646
+[15-Jul-2015 02:19:12 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/technols/public_html/bakery/backery/application/controllers/welcome.php on line 646
+[16-Jul-2015 01:20:55 America/Chicago] PHP Fatal error:  Call to a member function result() on a non-object in /home2/technols/public_html/bakery/backery/application/views/updatecustomer.php on line 178
+[16-Jul-2015 03:19:23 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/technols/public_html/bakery/backery/application/controllers/driver.php on line 170
+[16-Jul-2015 03:19:57 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/technols/public_html/bakery/backery/application/controllers/driver.php on line 170
+[16-Jul-2015 03:20:46 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home2/technols/public_html/bakery/backery/application/controllers/driver.php on line 170
+[16-Jul-2015 03:30:40 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/technols/public_html/bakery/backery/application/controllers/driver.php on line 171
+[16-Jul-2015 03:31:08 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home2/technols/public_html/bakery/backery/application/controllers/driver.php on line 171
+[16-Jul-2015 05:21:54 America/Chicago] PHP Fatal error:  Call to a member function result() on a non-object in /home2/technols/public_html/bakery/backery/application/controllers/welcome.php on line 694
+[16-Jul-2015 05:22:16 America/Chicago] PHP Fatal error:  Call to a member function result() on a non-object in /home2/technols/public_html/bakery/backery/application/controllers/welcome.php on line 694
+[16-Jul-2015 05:22:19 America/Chicago] PHP Fatal error:  Call to a member function result() on a non-object in /home2/technols/public_html/bakery/backery/application/controllers/welcome.php on line 694
+[16-Jul-2015 07:05:11 America/Chicago] PHP Fatal error:  Call to undefined method Customermodel::viewcustomerCallForPrice() in /home2/technols/public_html/bakery/backery/application/controllers/invoice.php on line 51
+[24-Jul-2015 09:20:23 America/Chicago] PHP Fatal error:  Cannot redeclare Customermodel::invoiceData() in /home2/technols/public_html/bakery/backery/application/models/customermodel.php on line 269
+[24-Jul-2015 09:41:02 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/createInvoiceCall.php on line 235
+[24-Jul-2015 09:42:41 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/createInvoiceCall.php on line 235
+[24-Jul-2015 09:42:47 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/createInvoiceCall.php on line 235
+[24-Jul-2015 09:42:49 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/createInvoiceCall.php on line 235
+[24-Jul-2015 09:42:51 America/Chicago] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/technols/public_html/bakery/backery/application/views/createInvoiceCall.php on line 235
