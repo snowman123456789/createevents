@@ -1,125 +1,64 @@
-# CodeIgniter CreatEventx Endpoints with OAuth2 Server
+# Instagram PHP Scrapper
+This library is based on the Instagram web version. We develop it because nowadays it is hard to get an approved Instagram application. The purpose is to support every feature that the web desktop and mobile version support. 
 
-----------------
-
-CodeIgniter OAuth2 Server, a CodeIgniter package for OAuth2.0 Server,
-
-
-For OAuth2.0: [http://oauth.net/2/](http://oauth.net/2/)
-
-Learn OAuth2.0 protocol: [http://bshaffer.github.io/oauth2-server-php-docs/overview/grant-types/](http://bshaffer.github.io/oauth2-server-php-docs/overview/grant-types/)
-
-
-# Installation
-
-----------------
-
-1.Clone pakcage
-
-> git clone https://github.com/snowman123456789/codeigniter-oauth2-server /path/to/www/root/
-
-2.Config database -> $db['oauth']
-
-> cd codeigniter-oauth2-server
-
-> vim application/config/database.php
-
-config `dsn`, `hostname`, `username`, `password`, `database`
-
-3.Import database
-
-> mysqldump -u root -p > sql/oauth.sql
-
-
-# Usage
-
-----------------
-
-* Password Credentials
-
-```
-class PasswordCredentials extends CI_Controller {
-    function __construct(){
-        @session_start();
-        parent::__construct();
-        $this->load->library("Server", "server");
-        $this->server->password_credentials();	//credentials check here
-    }
-    function index(){
-        //code here
-    }
-}
+## Code Example
+```php
+$instagram = Instagram::withCredentials('username', 'password');
+$instagram->login();
+$account = $instagram->getAccountById(3);
+echo $account->getUsername();
 ```
 
-* Client Credentials
-
-```
-class ClientCredentials extends CI_Controller {
-    function __construct(){
-        @session_start();
-        parent::__construct();
-        $this->load->library("Server", "server");
-        $this->server->client_credentials(); //credentials check here
-    }    
-    function index(){
-    	//code here
-    }
-}
+Some methods do not require authentication: 
+```php
+$instagram = new Instagram();
+$nonPrivateAccountMedias = $instagram->getMedias('kevin');
+echo $nonPrivateAccountMedias[0]->getLink();
 ```
 
-* Refresh Token
+If you use authentication it is recommended to cache the user session. In this case you don't need to run the `$instagram->login()` method every time your program runs:
 
-```
-class RefreshToken extends CI_Controller {
-    function __construct(){
-        @session_start();
-        parent::__construct();
-        $this->load->library("Server", "server");
-    }    
-    function index(){
-        $this->server->refresh_token(); //refresh token
-    }
-}
+```php
+$instagram = Instagram::withCredentials('username', 'password', '/path/to/cache/folder/');
+$instagram->login(); // will use cached session if you can force login $instagram->login(true)
+$account = $instagram->getAccountById(3);
+echo $account->getUsername();
 ```
 
-* Get resource by OAuth2.0 authorize.
+Using proxy for requests:
 
+```php
+$instagram = new Instagram();
+Instagram::setProxy([
+    'address' => '111.112.113.114',
+    'port'    => '8080',
+    'tunnel'  => true,
+    'timeout' => 30,
+]);
+// Request with proxy
+$account = $instagram->getAccount('kevin');
+Instagram::disableProxy();
+// Request without proxy
+$account = $instagram->getAccount('kevin');
 ```
-class Resource extends CI_Controller {
-    function __construct(){
-        @session_start();
-        parent::__construct();
-        $this->load->library("Server", "server");
-    	$this->server->require_scope("userinfo cloud file node");//you can require scope here 
-    }
-    public function index(){
-        //resource api controller
-        echo json_encode(array('success' => true, 'message' => 'You accessed my APIs!'));
-    }
-}
+
+## Installation
+
+### Using composer
+
+```sh
+composer.phar require raiym/instagram-php-scraper
+```
+or 
+```sh
+composer require raiym/instagram-php-scraper
 ```
 
-* More usage:
+### If you don't have composer
+You can download it [here](https://getcomposer.org/download/).
 
-for more usage please see: `application/controllers/Test.php`
+## Examples
+See examples [here](https://github.com/postaddictme/instagram-php-scraper/tree/master/examples).
 
-
-
-# Features
-
-----------------
-
-* Support for: `Password Credentials`, `Client Credentials`, `Implicit Grant`, `Authorization Code` grant types.
-
-* Refresh access token
-
-* From access token get resource data
-
-* Support for Mysql, Redis, Mongo
-
-
-# License
-
-----------------
-
-This library is under the MIT license. For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
+## Other
+Java library: https://github.com/postaddictme/instagram-java-scraper
