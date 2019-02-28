@@ -15,6 +15,12 @@ class Invalidfacing  extends CI_Controller {
 
 		$this->load->helper('url');
 		}
+		public function indexnew(){
+
+
+
+		}
+
 	public function index()
 
     {
